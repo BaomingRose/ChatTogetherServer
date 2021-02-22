@@ -1,0 +1,90 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ChatDao	dao/ChatDao.hpp	/^    ChatDao(MysqlConn* conn) {$/;"	f	class:ChatDao
+ChatDao	dao/ChatDao.hpp	/^class ChatDao {$/;"	c
+Client_Sock	TCPServer.hpp	/^    Client_Sock(int fd, sockaddr_in addr, ConnTool* t, Online_Map* s, Msg_Pool* p) {$/;"	f	struct:Client_Sock
+Client_Sock	TCPServer.hpp	/^struct Client_Sock {$/;"	s
+ConnTool	dao/ConnTool.hpp	/^    ConnTool(int num) : _num(num) {$/;"	f	class:ConnTool
+ConnTool	dao/ConnTool.hpp	/^class ConnTool {$/;"	c
+IsFull	Msg_Pool.hpp	/^    bool IsFull() {$/;"	f	class:Msg_Pool
+MOST_CONNET_NUM	TCPServer.hpp	19;"	d
+MSG_POOL_SIZE	Msg_Pool.hpp	9;"	d
+MSG_PORT_DEFAUT	UDP_Msg.hpp	19;"	d
+Msg_Pool	Msg_Pool.hpp	/^    Msg_Pool() : _capacity(MSG_POOL_SIZE) {$/;"	f	class:Msg_Pool
+Msg_Pool	Msg_Pool.hpp	/^class Msg_Pool {$/;"	c
+MysqlConn	dao/MysqlConn.hpp	/^    MysqlConn() {$/;"	f	class:MysqlConn
+MysqlConn	dao/MysqlConn.hpp	/^class MysqlConn {$/;"	c
+Online_Map	Online_Map.hpp	/^    Online_Map() {$/;"	f	class:Online_Map
+Online_Map	Online_Map.hpp	/^class Online_Map {$/;"	c
+PopMsgFromPool	Msg_Pool.hpp	/^    void PopMsgFromPool(string& msg) {$/;"	f	class:Msg_Pool
+PushMsgToPool	Msg_Pool.hpp	/^    void PushMsgToPool(const string& msg) {$/;"	f	class:Msg_Pool
+TCPServer	TCPServer.hpp	/^    TCPServer() : sock(-1) {  };$/;"	f	class:TCPServer
+TCPServer	TCPServer.hpp	/^class TCPServer {$/;"	c
+UDP_Msg	UDP_Msg.hpp	/^    UDP_Msg(Msg_Pool* p, Online_Map* m, ConnTool* t) : sock(-1), tool(t), pool(p), on_map(m)  {  }$/;"	f	class:UDP_Msg
+UDP_Msg	UDP_Msg.hpp	/^class UDP_Msg {$/;"	c
+UDPconn	test.cpp	/^void UDPconn() {$/;"	f
+UserDao	dao/UserDao.hpp	/^    UserDao(MysqlConn* conn) {$/;"	f	class:UserDao
+UserDao	dao/UserDao.hpp	/^class UserDao {$/;"	c
+_capacity	Msg_Pool.hpp	/^    size_t _capacity;$/;"	m	class:Msg_Pool
+_conn	dao/ChatDao.hpp	/^    MYSQL* _conn;$/;"	m	class:ChatDao
+_conn	dao/UserDao.hpp	/^    MYSQL* _conn;$/;"	m	class:UserDao
+_num	dao/ConnTool.hpp	/^    size_t _num;$/;"	m	class:ConnTool
+_queLock	Msg_Pool.hpp	/^    pthread_mutex_t _queLock;$/;"	m	class:Msg_Pool
+_queMsg	Msg_Pool.hpp	/^    queue<string> _queMsg;$/;"	m	class:Msg_Pool
+_queSynCom	Msg_Pool.hpp	/^    pthread_cond_t _queSynCom;$/;"	m	class:Msg_Pool
+_queSynPro	Msg_Pool.hpp	/^    pthread_cond_t _queSynPro;$/;"	m	class:Msg_Pool
+broad_send	UDP_Msg.hpp	/^    static void* broad_send(void* ptr) {$/;"	f	class:UDP_Msg
+change_state	dao/UserDao.hpp	/^    bool change_state(int userid, int state) {$/;"	f	class:UserDao
+check_user	dao/UserDao.hpp	/^    bool check_user(int userid, const std::string& password, std::string& username) {$/;"	f	class:UserDao
+cli_addr	TCPServer.hpp	/^    sockaddr_in cli_addr;$/;"	m	struct:Client_Sock
+cli_fd	TCPServer.hpp	/^    int cli_fd;$/;"	m	struct:Client_Sock
+conn	dao/MysqlConn.hpp	/^    MYSQL* conn;$/;"	m	class:MysqlConn
+conn_tool	dao/ConnTool.hpp	/^    std::queue<MysqlConn*> conn_tool;$/;"	m	class:ConnTool
+empt	dao/ConnTool.hpp	/^    pthread_cond_t empt;$/;"	m	class:ConnTool
+erase	Online_Map.hpp	/^    void erase(const std::string& username) {$/;"	f	class:Online_Map
+get_addrs	Online_Map.hpp	/^    std::vector<sockaddr_in> get_addrs() {$/;"	f	class:Online_Map
+get_conn	dao/ConnTool.hpp	/^    MysqlConn* get_conn() {$/;"	f	class:ConnTool
+get_conn	dao/MysqlConn.hpp	/^    MYSQL* get_conn() {$/;"	f	class:MysqlConn
+get_records	dao/ChatDao.hpp	/^    std::vector<std::string> get_records() {$/;"	f	class:ChatDao
+get_users	Online_Map.hpp	/^    std::vector<std::string> get_users() {$/;"	f	class:Online_Map
+handle	TCPServer.hpp	/^    static void* handle(void* ptr) {$/;"	f	class:TCPServer
+handle_log	TCPServer.hpp	/^    static void handle_log(int fd, char* data,  ConnTool* tool, Msg_Pool* pool, Online_Map* on_m) {$/;"	f	class:TCPServer
+handle_sign_up	TCPServer.hpp	/^    static void handle_sign_up(int fd, char* data, ConnTool* tool) {$/;"	f	class:TCPServer
+init	TCPServer.hpp	/^    void init(short port) {$/;"	f	class:TCPServer
+init	UDP_Msg.hpp	/^    void init(short port = MSG_PORT_DEFAUT) {$/;"	f	class:UDP_Msg
+insert	Online_Map.hpp	/^    void insert(const std::string& s, const sockaddr_in& addr) {$/;"	f	class:Online_Map
+insert	dao/ChatDao.hpp	/^    int insert(const std::string& msg, const std::string& username, const std::string& date) {$/;"	f	class:ChatDao
+insert	dao/UserDao.hpp	/^    int insert(const std::string& user_name, const std::string& password,  int state) {$/;"	f	class:UserDao
+main	dao/test.cpp	/^int main() {$/;"	f
+main	main.cpp	/^int main() {$/;"	f
+main	test.cpp	/^int main() {$/;"	f
+ms_pool	TCPServer.hpp	/^    Msg_Pool* ms_pool;$/;"	m	struct:Client_Sock
+mtx	dao/ConnTool.hpp	/^    pthread_mutex_t mtx;$/;"	m	class:ConnTool
+on_map	Online_Map.hpp	/^    std::unordered_map<std::string, sockaddr_in> on_map;$/;"	m	class:Online_Map
+on_map	UDP_Msg.hpp	/^    Online_Map* on_map;$/;"	m	class:UDP_Msg
+pool	UDP_Msg.hpp	/^    Msg_Pool* pool;$/;"	m	class:UDP_Msg
+push_conn	dao/ConnTool.hpp	/^    void push_conn(MysqlConn* conn) {$/;"	f	class:ConnTool
+query_state	dao/UserDao.hpp	/^    int query_state() {$/;"	f	class:UserDao
+recieve	UDP_Msg.hpp	/^    static void* recieve(void* ptr) {$/;"	f	class:UDP_Msg
+rw_lock	Online_Map.hpp	/^    pthread_rwlock_t rw_lock;$/;"	m	class:Online_Map
+s_ptr	TCPServer.hpp	/^    Online_Map* s_ptr;$/;"	m	struct:Client_Sock
+sock	TCPServer.hpp	/^    int sock;$/;"	m	class:TCPServer
+sock	UDP_Msg.hpp	/^    int sock;$/;"	m	class:UDP_Msg
+start	TCPServer.hpp	/^    void start(ConnTool* tool_ptr, Online_Map* map_ptr, Msg_Pool* p) {$/;"	f	class:TCPServer
+start	UDP_Msg.hpp	/^    void start() {$/;"	f	class:UDP_Msg
+testChatDao	dao/test.cpp	/^void testChatDao() {$/;"	f
+testConn	dao/test.cpp	/^void testConn() {$/;"	f
+testTCPconn	test.cpp	/^void testTCPconn() {$/;"	f
+testTool	dao/test.cpp	/^void testTool() {$/;"	f
+testUserDao	dao/test.cpp	/^void testUserDao() {$/;"	f
+tool	TCPServer.hpp	/^    ConnTool* tool;$/;"	m	struct:Client_Sock
+tool	UDP_Msg.hpp	/^    ConnTool* tool;$/;"	m	class:UDP_Msg
+~ConnTool	dao/ConnTool.hpp	/^    ~ConnTool() {$/;"	f	class:ConnTool
+~Msg_Pool	Msg_Pool.hpp	/^    ~Msg_Pool() {$/;"	f	class:Msg_Pool
+~MysqlConn	dao/MysqlConn.hpp	/^    ~MysqlConn() {$/;"	f	class:MysqlConn
+~Online_Map	Online_Map.hpp	/^    ~Online_Map() {$/;"	f	class:Online_Map
+~UDP_Msg	UDP_Msg.hpp	/^    ~UDP_Msg() {$/;"	f	class:UDP_Msg

@@ -1,0 +1,27 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+ConnTool	ConnTool.hpp	/^    ConnTool(int num) : _num(num) {$/;"	f	class:ConnTool
+ConnTool	ConnTool.hpp	/^class ConnTool {$/;"	c
+MysqlConn	MysqlConn.hpp	/^    MysqlConn() {$/;"	f	class:MysqlConn
+MysqlConn	MysqlConn.hpp	/^class MysqlConn {$/;"	c
+UserDao	UserDao.hpp	/^    UserDao(MysqlConn* conn) : _conn(conn) {  }$/;"	f	class:UserDao
+UserDao	UserDao.hpp	/^class UserDao {$/;"	c
+_conn	UserDao.hpp	/^    MysqlConn* _conn;$/;"	m	class:UserDao
+_num	ConnTool.hpp	/^    size_t _num;$/;"	m	class:ConnTool
+conn	MysqlConn.hpp	/^    MYSQL* conn;$/;"	m	class:MysqlConn
+conn_tool	ConnTool.hpp	/^    std::queue<MysqlConn*> conn_tool;$/;"	m	class:ConnTool
+empt	ConnTool.hpp	/^    pthread_cond_t empt;$/;"	m	class:ConnTool
+get_conn	ConnTool.hpp	/^    MysqlConn* get_conn() {$/;"	f	class:ConnTool
+get_conn	MysqlConn.hpp	/^    MYSQL* get_conn() {$/;"	f	class:MysqlConn
+insert	UserDao.hpp	/^    bool insert() {$/;"	f	class:UserDao
+main	test.cpp	/^int main() {$/;"	f
+mtx	ConnTool.hpp	/^    pthread_mutex_t mtx;$/;"	m	class:ConnTool
+push_conn	ConnTool.hpp	/^    void push_conn(MysqlConn* conn) {$/;"	f	class:ConnTool
+testConn	test.cpp	/^void testConn() {$/;"	f
+testTool	test.cpp	/^void testTool() {$/;"	f
+~ConnTool	ConnTool.hpp	/^    ~ConnTool() {$/;"	f	class:ConnTool
+~MysqlConn	MysqlConn.hpp	/^    ~MysqlConn() {$/;"	f	class:MysqlConn
