@@ -48,6 +48,24 @@ public:
 
     //返回最后十条记录
     std::vector<std::string> get_records() {
+        std::vector<std::string> res;
+        std::string sql = "select * from (select msgid, msg from chat_history order by msgid desc limit 10) tmp order by msgid";
+        mysql_query(_conn, sql.c_str());    
 
+        MYSQL_RES* res_ptr = mysql_store_result(_conn);
+        if (!res_ptr) {    
+            std::cout << "query all failed" << std::endl;    
+            return res;
+        }    
+
+        int row = mysql_num_rows(res_ptr);    
+
+        for (int i = 0; i < row; ++i) {    
+            MYSQL_ROW result_row = mysql_fetch_row(res_ptr);    
+            res.push_back(std::string(result_row[1]));
+        }    
+
+        mysql_free_result(res_ptr);
+        return res;
     }
 };

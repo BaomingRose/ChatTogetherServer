@@ -58,10 +58,22 @@ void testChatDao() {
     tool.push_conn(conn);
 }
 
+void testGet10Row() {
+    ConnTool tool(5);
+    MysqlConn* conn = tool.get_conn();
+    ChatDao dao(conn);
+    vector<string> res = dao.get_records();
+
+    int size = res.size();
+    for (int i = 0; i < size; ++i) {
+        cout << "记录" << i << "：" << res[i] << endl;
+    }
+    tool.push_conn(conn);
+}
 int main() {
     //testTool();
     //testUserDao();
-    testChatDao();
-
+    //testChatDao();
+    testGet10Row();
     return 0;
 }

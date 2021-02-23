@@ -145,8 +145,6 @@ private:
        for (const auto& s : v) {
            memcpy(begin, s.c_str(), s.size());
            begin += s.size();
-           *begin = '\n';
-           begin++;
        }
        send(fd, records, sizeof(records), 0);
        //获取在线用户
@@ -157,7 +155,6 @@ private:
        for (const auto& s : v) {
            memcpy(user_begin, s.c_str(), s.size());
            user_begin += s.size();
-           *user_begin = '\n';
            user_begin++;
        }
        //然后开启心跳检查
